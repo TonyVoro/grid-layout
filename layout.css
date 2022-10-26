@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -85,3 +86,77 @@ header, footer, aside, nav {
     display: flex;
     justify-content: center;
 }
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 300px);
+    grid-template-rows: auto auto 1fr auto;
+    background-color: lightblue;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .layout {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: unset;
+    }
+}
+
+header, footer {
+    grid-column: 1 / 4;
+    background-color: burlywood;
+    text-align: center;
+    font-size: large;
+}
+
+aside {
+    grid-row: 2 / 4;
+    font-size: large;
+}
+
+.left-aside {
+    grid-column: 1 / 2;
+    background-color: forestgreen;
+    text-align: center;
+}
+
+.right-aside {
+    grid-column: 2 / 4;
+    display: flex;
+    justify-content: center;
+    background-color: deepskyblue;
+}
+
+header, footer, aside {
+    padding: 1rem;
+    border: 2px solid red;
+}
+
+.image {
+    display: flex;
+    border: 2px solid darkblue;
+    height: 170px;
+    width: 200px;
+    font-size: large;
+}
+
+.test {
+    display: flex;
+    align-self: flex-end;
+    gap: 25px;
+}
+
+.article {
+    display: inline-block;
+    align-self: center;
+    justify-content: center;
+}
+>>>>>>> 0b11b4060972b9a0c5e9b98a1a508ae5b852792c
